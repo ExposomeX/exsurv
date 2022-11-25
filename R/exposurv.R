@@ -15,6 +15,7 @@ urlhead = 'http://www.exposomex.cn:8080/'
 #' @examples res <- InitSurv()
 #' @author Changxin Lan, Bin Wang(corresponding author)
 InitSurv = function(){
+  library(gridExtra)
   url = paste0(urlhead,'InitSurv')
   seednum = sample(1000,1)
   res = httr::POST(url,

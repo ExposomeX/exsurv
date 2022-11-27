@@ -4,7 +4,7 @@
 \alias{VizSurvAsso}
 \title{Visualize association analysis}
 \usage{
-VizSurvAsso = function(PID, OutPath = "default",VarsN = "single.factor",
+VizSurvAsso(PID, OutPath = "default",VarsN = "single.factor",
     Layout = "volcano",Brightness = "light",Palette = "default1",ColorFor= "p.value",SizeFor= "p.value")
 }
 \arguments{
@@ -36,7 +36,6 @@ Visualize association analysis
 \examples{
 res <- InitSurv()
    res1 = LoadSurv(PID = res$PID, UseExample = "example#1")
-   res2 = TransDummy(PID=res$PID, Vars="default")
    res3 = FindCovaSurv(PID=res$PID, TimeY = "Y1", EventY= 'Y2',
    VarsC_Prior = "default", VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
    res4 = SurvAsso(PID=res$PID, TimeY = "Y1", EventY= 'Y2',VarsX='all.x',

@@ -4,8 +4,8 @@
 \alias{SurvAsso}
 \title{Association analysis}
 \usage{
-SurvAsso = function(PID, OutPath = "default",
-    TimeY, EventY,VarsX='all.x',VarsN = "single.factor",VarsSel = F,
+SurvAsso(PID, OutPath = "default",
+    TimeY, EventY,VarsX='all.x',VarsN = "single.factor",VarsSel = T,
     IncCova = T)
 }
 \arguments{
@@ -41,7 +41,6 @@ Association analysis for survival data
 \examples{
 res <- InitSurv()
    res1 = LoadSurv(PID = res$PID, UseExample = "example#1")
-   res2 = TransDummy(PID=res$PID, Vars="default")
    res3 = FindCovaSurv(PID=res$PID, TimeY = "Y1", EventY= 'Y2',
    VarsC_Prior = "default", VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
    res4 = SurvAsso(PID=res$PID, TimeY = "Y1", EventY= 'Y2',VarsX='all.x',

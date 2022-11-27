@@ -4,7 +4,7 @@
 \alias{VizSurvPred}
 \title{Visualize the prediction performance}
 \usage{
-VizSurvPred = function(PID,OutPath = "default",Layout = "curve",
+VizSurvPred(PID,OutPath = "default",Layout = "curve",
     Brightness = "light",Palette = "default1")
 }
 \arguments{
@@ -29,7 +29,6 @@ Visualize the prediction performance
 \examples{
 res <- InitSurv()
    res1 = LoadSurv(PID = res$PID, UseExample = "example#1")
-   res2 = TransDummy(PID=res$PID, Vars="default")
    res3 = FindCovaSurv(PID=res$PID, TimeY = "Y1", EventY= 'Y2',
    VarsC_Prior = "default", VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
    res4 = SurvPred(PID=res$PID, TimeY = "Y1", EventY= 'Y2',VarsX='all.x',

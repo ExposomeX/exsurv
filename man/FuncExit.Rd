@@ -16,7 +16,7 @@ Exit status
 End the module analysis
 }
 \examples{
-res = InitTidy()
+res = InitSurv()
    FuncExit(PID = res$PID)
 }
 \author{

@@ -4,7 +4,7 @@
 \alias{SurvPred}
 \title{Build prediction models}
 \usage{
-SurvPred = function(PID,OutPath = "default",TimeY,EventY,VarsX = "all.x",
+SurvPred(PID,OutPath = "default",TimeY,EventY,VarsX = "all.x",
     IncCova = T,RsmpMethod = "cv",Folds = 3,Ratio = 0.667,Repeats = 3)
 }
 \arguments{
@@ -43,7 +43,6 @@ Build prediction models
 \examples{
 res <- InitSurv()
    res1 = LoadSurv(PID = res$PID, UseExample = "example#1")
-   res2 = TransDummy(PID=res$PID, Vars="default")
    res3 = FindCovaSurv(PID=res$PID, TimeY = "Y1", EventY= 'Y2',
    VarsC_Prior = "default", VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
    res4 = SurvPred(PID=res$PID, TimeY = "Y1", EventY= 'Y2',VarsX='all.x',

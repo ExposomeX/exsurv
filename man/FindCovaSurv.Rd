@@ -4,7 +4,7 @@
 \alias{FindCovaSurv}
 \title{Find covariates}
 \usage{
-FindCovaSurv = function(PID, OutPath = "default", TimeY, EventY, VarsC_Prior = "default", 
+FindCovaSurv(PID, OutPath = "default", TimeY, EventY, VarsC_Prior = "default",
     VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
 }
 \arguments{
@@ -37,7 +37,6 @@ Find covariates
 \examples{
 res <- InitSurv()
    res1 = LoadSurv(PID = res$PID, UseExample = "example#1")
-   res2 = TransDummy(PID=res$PID, Vars="default")
    res3 = FindCovaSurv(PID=res$PID, TimeY = "Y1", EventY= 'Y2',
    VarsC_Prior = "default", VarsC_Fixed = NULL, Method = "single.factor", Thr = 0.1)
    FuncExit(PID = res$PID)
